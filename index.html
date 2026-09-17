@@ -60,6 +60,8 @@ header .sub{color:var(--hdr-muted)}
 .split i{display:block;height:100%}
 .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:11.5px;color:var(--hdr-muted)}
 .legend b{color:#fff;font-weight:600}
+.legend.leg-light{color:var(--muted)}
+.legend.leg-light b{color:var(--txt)}
 .lg{display:inline-flex;align-items:center;gap:5px}
 .sq{width:8px;height:8px;border-radius:2px;flex:none}
 
@@ -503,7 +505,7 @@ function vMercado(k){
   m.sectores.forEach(function(s,i){
     h += '<i style="width:'+s.peso.toFixed(2)+'%;background:'+paleta[i%paleta.length]+'"></i>';
   });
-  h += '</div><div class="legend">';
+  h += '</div><div class="legend leg-light">';
   m.sectores.forEach(function(s,i){
     h += '<span class="lg"><i class="sq" style="background:'+paleta[i%paleta.length]+'"></i>'
       + esc(s.sector)+' <b>'+s.peso.toFixed(1)+'%</b></span>';
